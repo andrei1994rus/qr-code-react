@@ -1,11 +1,12 @@
 const HtmlWebpackPlugin=require('html-webpack-plugin');
 const webpack=require('webpack');
 const path=require('path');
+const MiniCssExtractPlugin=require('mini-css-extract-plugin');
 const {CleanWebpackPlugin}=require('clean-webpack-plugin');
 
 module.exports=
 {
-	mode:'development',
+	mode:'production',
 	entry:
 	{
 		app:path.resolve(__dirname,'./src/index.js'),
@@ -13,7 +14,7 @@ module.exports=
     output:
     {
         path:path.resolve(__dirname,'./dist'),
-        filename:'[name].js',
+        filename:'[name].[contenthash].js',
     },
 	module:
 	{
@@ -29,7 +30,7 @@ module.exports=
                 exclude:/node_modules/,
                 use:
                 [
-                	'style-loader',
+                	MiniCssExtractPlugin.loader,
                     {
                         loader:'css-loader',
                         options:
@@ -60,6 +61,10 @@ module.exports=
 		{
 			template:'./src/index.html',
 		}),
+		new MiniCssExtractPlugin(
+		{
+            filename:'styles.[contenthash].css',
+        }),
 	],
 	devServer:
 	{

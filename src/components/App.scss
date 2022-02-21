@@ -1,11 +1,20 @@
-div [class~="test"]
+div 
 {
-	color:green;
-	font-size:70px;
-}
+	& [class~="test"]
+	{
+		color:green;
+		font-size:70px;
+	}
 
-div [class~="test2"]
-{
-	color:red;
-	font-size:70px;
+	& [class~="test2"]
+	{
+		color:red;
+		font-size:70px;
+	}
+
+	& [class~="qrcode"]
+	{
+		margin:4vmax;
+		padding:2vmax;
+	}
 }

@@ -1,5 +1,22 @@
+import React,{useState,useEffect} from 'react';
 import './App.scss';
+import Header from './Header';
 
-const App=()=><div><div className="test">Test!</div><div className="test2">Test 2!</div></div>;
+import QRCode from 'react-qr-code';
+
+const App=()=>
+{	
+
+	return (
+		<div>
+			<Header/>
+			<div className="test">Test 1</div>
+			<div className="test2">Test 2</div>
+			<div className="qrcode">
+				<QRCode value="text"/>
+			</div>
+		</div>
+	);
+}
 
 export default App;

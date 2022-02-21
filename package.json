@@ -4,9 +4,11 @@
   "description": "Project by React+Webpack",
   "main": "index.js",
   "scripts": {
-    "local": "set NODE_ENV=production && webpack serve --open",
-    "test": "set NODE_ENV=development && webpack serve --open",
-    "build": "set NODE_ENV=production && webpack -c webpack.config.js"
+    "start": "npm run prod-build && npm run server",
+    "server": "node server/server.js",
+    "local": "webpack serve --open",
+    "build": "webpack --config webpack.config.js",
+    "prod-build": "webpack --config webpack.prod.config.js"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +32,7 @@
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-qr-code": "^2.0.3"
   }
 }
