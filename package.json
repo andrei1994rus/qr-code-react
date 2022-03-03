@@ -4,10 +4,11 @@
   "description": "Project by React+Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "npm run prod-build && npm run server",
+    "start": "npm run server",
     "server": "node server/server.js",
     "local": "webpack serve --open",
     "build": "webpack --config webpack.config.js",
+    "heroku-postbuild": "npm run prod-build",
     "prod-build": "webpack --config webpack.prod.config.js"
   },
   "keywords": [],
@@ -23,7 +24,7 @@
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
-    "node-sass": "^4.0.0",
+    "sass": "^1.49.9",
     "sass-loader": "^12.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.68.0",
@@ -31,6 +32,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "express": "^4.17.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-qr-code": "^2.0.3"
