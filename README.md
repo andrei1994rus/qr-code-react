@@ -16,8 +16,8 @@
 - ReactJS;
 - HTML;
 - JS;
-- CSS, CSS3, SCSS;
-- Libraries: react-qr-code, node-saas (4.14.1), Express;
+- CSS3, SCSS;
+- Libraries: react-qr-code, saas, Express;
 - Method: Desktop First;
 ---
 [URL](https://qrcode-react.herokuapp.com/) .
