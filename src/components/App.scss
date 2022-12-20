@@ -5,9 +5,9 @@
 	width:100vw;
 	padding-top:2vmax;
 
-	@media(max-width:149px)
+	@media(max-width:767px)
 	{
-		display:none;
+		width:97vw;
 	}
 
 	@media(max-width:319px)
@@ -15,9 +15,9 @@
 		width:95vw;
 	}
 
-	@media(max-width:767px)
+	@media(max-width:149px)
 	{
-		width:97vw;
+		display:none;
 	}
 }
 
@@ -31,7 +31,7 @@
 		width:90vw;
 		padding-top:2vmax;
 	    padding-left:3vw;
-	    font-size:70%;
+	    font-size:7vw;
 	    font-weight:bold;
 	    color:red;
 	}
@@ -39,28 +39,50 @@
 
 @mixin adaptive-input
 {
-	font-size:7vmax;
+	font-size:5vmax;
 	width:80vw;
 
-	@media(max-width:319px)
+	@media(max-width:1023px)
 	{
-		font-size:80%;
+		font-size:4.5vmax;
 		width:85vw;
 	}
 
 	@media(max-width:767px)
 	{
-		font-size:5.5vmax;
-		width:85vw;
-	}
-
-	@media(max-width:1023px)
-	{
-		font-size:5vmax;
-		width:85vw;
+		font-size:7vw;
 	}
 }
 
+@mixin adaptive-info
+{
+	font-size:5vmax;
+
+	@media(max-width:1023px)
+	{
+		font-size:4.5vmax;
+	}
+
+	@media(max-width:767px)
+	{
+		font-size:7vw;
+	}
+}
+
+@mixin adaptive-button
+{
+	font-size:4vmax;
+
+	@media(max-width:1023px)
+	{
+		font-size:3.5vmax;
+	}
+
+	@media(max-width:767px)
+	{
+		font-size:7vw;
+	}
+}
 
 div 
 {
@@ -72,7 +94,7 @@ div
 		{
 			padding-left:3vw;
 
-			& *[class~="i_text"]
+			& *[class~="input_text"]
 			{
 				@include adaptive-input;
 				border:4px solid blue;
@@ -84,7 +106,7 @@ div
 			padding-left:3vw;
 			padding-bottom:1vmax;
 			color:red;
-			font-size:5vmax;
+			@include adaptive-info;
 			font-weight:bold;
 		}
 
@@ -102,7 +124,7 @@ div
 			{
 				background-color:blue;
 				color:white;
-				font-size:4vmax;
+				@include adaptive-button; 
 			}
 		}
 	}

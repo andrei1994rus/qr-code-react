@@ -3,21 +3,21 @@ $fc:white;
 
 @mixin adaptive-header
 {
-	font-size:3vmax;
+	font-size:5vmax;
 
-	@media(max-width:319px)
+	@media(max-width:1023px)
 	{
-		font-size:85%;
+		font-size:4.5vmax;
 	}
 
 	@media(max-width:767px)
 	{
-		font-size:100%;
+		font-size:5vw;
 	}
 
-	@media(max-width:1023px)
+	@media(max-width:319px)
 	{
-		font-size:3vmax;
+		font-size:6vw;
 	}
 }
 
