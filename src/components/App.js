@@ -22,8 +22,6 @@ const App=()=>
 
 	const addZero=(value)=>(value>=10) ? value : `0${value}`;
 
-	const changeText=()=>setText();
-
 	const getDate=()=>
 	{
 		const day=addZero(new Date().getDate());
@@ -70,7 +68,7 @@ const App=()=>
 				<div className="div_input">
 					<input type="text"
 						   placeholder="input text"
-						   className="i_text"
+						   className="input_text"
 						   onChange={e=>setInputValue(e.target.value)}/>
 				</div>
 				<div className="div_info">
