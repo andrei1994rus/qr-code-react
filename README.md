@@ -20,4 +20,4 @@
 - Libraries: react-qr-code, saas, Express;
 - Method: Desktop First;
 ---
-[URL](https://qrcode-react.herokuapp.com/) .
+[URL](https://qr-code-react.netlify.app/) .
